@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS loja_perfumes;
+USE loja_perfumes;
+
+CREATE TABLE IF NOT EXISTS Perfumes (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(100) NOT NULL,
+    Marca VARCHAR(100) NOT NULL,
+    Preco DECIMAL(10,2) NOT NULL,
+    Estoque INT NOT NULL,
+    PRIMARY KEY (Id)
+);

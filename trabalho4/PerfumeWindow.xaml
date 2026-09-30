@@ -1,0 +1,41 @@
+<Window x:Class="LojaPerfumesWPF.PerfumeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Perfume" Height="360" Width="430"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nome" Margin="0,0,0,5"/>
+        <TextBox x:Name="NomeBox" Grid.Row="1" Height="30" Margin="0,0,0,15"/>
+
+        <TextBlock Text="Marca" Grid.Row="2" Margin="0,0,0,5"/>
+        <TextBox x:Name="MarcaBox" Grid.Row="3" Height="30" Margin="0,0,0,15"/>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="0,0,8,0">
+                <TextBlock Text="Preço" Margin="0,0,0,5"/>
+                <TextBox x:Name="PrecoBox" Height="30"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                <TextBlock Text="Estoque" Margin="0,0,0,5"/>
+                <TextBox x:Name="EstoqueBox" Height="30"/>
+            </StackPanel>
+
+            <Button Content="Salvar" Width="100" Height="35" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Salvar_Click" Margin="0,0,0,0"/>
+            <Button Content="Cancelar" Width="100" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="Cancelar_Click"/>
+        </Grid>
+    </Grid>
+</Window>
